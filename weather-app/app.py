@@ -16,5 +16,9 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 result = response.json()
 
 temp = round(result["list"][0]["temp"]["average"] - 273.15)
+country = result['city']['country']
 
 print(f"Temperature in {city} is {temp} degrees celsius")
+print(f"Country: {country}")
+
+# print(result)
